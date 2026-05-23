@@ -1,0 +1,27 @@
+{
+  "name": "echo-server",
+  "version": "1.0.0",
+  "description": "Simple expressjs server that holds in memeory the last post message and responds back the message on a get request.",
+  "keywords": [
+    "nodejs",
+    "expressjs"
+  ],
+  "homepage": "https://github.com/matas-noreika/BIP26Dublin-personal#readme",
+  "bugs": {
+    "url": "https://github.com/matas-noreika/BIP26Dublin-personal/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matas-noreika/BIP26Dublin-personal.git"
+  },
+  "license": "ISC",
+  "author": "Matas Noreika",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
