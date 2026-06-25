@@ -1,3 +1,4 @@
+# General Site Configuration
 site_name: SMTP26
 site_url: https://matas-noreika.github.io/BIP26Dublin-personal
 site_description: Additional information for Dublin SMTP
@@ -5,8 +6,25 @@ site_author: matas noreika
 repo_name: matas-noreika/BIP26Dublin-personal
 repo_url: https://github.com/matas-noreika/BIP26Dublin-personal
 
+# Navigation Setup
 nav:
   - Home: index.md
   - BMP280: bmp280.md
   - QMI8658C: qmi8658c.md
   - LC29H: lc29h.md
+
+theme:
+  # logo: img/icon.png # icon to use in site
+  # favicon: img/favicon.png # site favicon
+  language: en
+  palette:
+    scheme: slate # Dark mode, default - light mode
+    primary: indigo
+    accent: indigo
+  font:
+    text: Roboto
+    code: Roboto Mono
+  features:
+    - content.code.copy # enable copy code button on code blocks
+    - content.code.select # enable line selection mode
+    - content.code.annotate # enables code annotation
