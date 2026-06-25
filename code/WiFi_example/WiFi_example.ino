@@ -19,8 +19,8 @@ const char* pass = "26069999"; //enter the password of your WiFi
 
 // HOST SERVER CONGFIGURATION
 // the domain of ther server we want to communicate with
-const char* host = "192.168.1.192"; 
-const int port = 3001; // standard HTTP port
+const char* host = "signalk.tail8e6138.ts.net"; 
+const int port = 443; // standard HTTP port
 const char* endpoint = "echo"; //the endpoint we will send a request at
 
 // Function to handle reading response from server

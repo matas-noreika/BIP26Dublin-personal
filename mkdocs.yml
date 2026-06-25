@@ -1,0 +1,9 @@
+site_name: SMTP26
+site_url: https://matas-noreika.github.io/BIP26Dublin-personal
+site_description: Additional information for Dublin SMTP
+site_author: matas noreika
+repo_name: matas-noreika/BIP26Dublin-personal
+repo_url: https://github.com/matas-noreika/BIP26Dublin-personal
+
+nav:
+  Home: index.md
