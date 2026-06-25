@@ -14,6 +14,7 @@ nav:
   - LC29H: lc29h.md
 
 theme:
+  name: material
   # logo: img/icon.png # icon to use in site
   # favicon: img/favicon.png # site favicon
   language: en
