@@ -8,5 +8,5 @@ repo_url: https://github.com/matas-noreika/BIP26Dublin-personal
 nav:
   - Home: index.md
   - BMP280: bmp280.md
-  - QMI8658C: qmi8558c.md
+  - QMI8658C: qmi8658c.md
   - LC29H: lc29h.md
