@@ -1,0 +1,28 @@
+BMP280
+
+Overview
+
+The BMP280 is a digital pressure sensor used in applications such as weather monitoring, altitude measurement, and indoor navigation systems. It is manufactured by Bosch Sensortec and represents the next generation of sensors from Bosch, serving as an upgrade to the BMP085/BMP180/BMP183 line, with a low altitude noise of 0.25 m and fast conversion time. It is small in size, low power, and widely used for environmental data measurements in weather stations, drones, and as part of altitude correction through GPS.
+
+Specifications
+
+The sensor is housed in an extremely compact 8-pin metal-lid LGA package with a footprint of only 2.0 × 2.5 mm² and 0.95 mm package height. The full-accuracy operation range covers pressures from 300 to 1100 hPa and temperatures from 0 to +65 °C. Supply voltage VDD ranges from 1.71 to 3.6 V, and VDDIO from 1.2 to 3.6 V. Average current consumption is 2.74 µA at 1 Hz, making it suitable for battery-driven devices. The sensor interfaces via either I²C or SPI protocols and includes a built-in IIR filter to minimise interference in output data. Internal oversampling rates for pressure and temperature can be selected independently, and Bosch provides predefined setting recommendations for common use cases such as smartphones, mobile weather stations, and flying toys.
+
+Known Issues
+
+
+Wrong I²C address: A common problem is the BMP280 reporting wildly incorrect temperature readings (e.g. −142.6 °C), which typically indicates communication or configuration issues — often an incorrect I²C address. Some BMP280 modules default to 0x76 while others use 0x77.
+Power supply instability: Voltage fluctuations, noise, or under-voltage can cause the sensor to misbehave, leading to inaccurate data or erratic behaviour.
+Temperature-induced drift: When temperature changes too rapidly or exceeds the sensor's operational limits, pressure and temperature readings can become inaccurate — particularly problematic in weather monitoring or altitude tracking applications.
+Damage from pin voltage: Holding any interface pin at a logical high level when VDDIO is switched off can permanently damage the device due to excessive current flow.
+Counterfeit modules: There are many counterfeit or low-quality sensors on the market; using them could compromise readings or damage devices in critical projects.
+
+
+Solutions
+
+
+Use an I²C scanner to detect the sensor's address. Ensure appropriate pull-up resistors (e.g. 4.7 kΩ) are present on the SDA and SCL lines to facilitate proper communication.
+Ensure the power supply is stable and within the recommended voltage range. Use low-noise voltage regulators and add decoupling capacitors to smooth out power fluctuations.
+To reduce temperature drift effects, isolate the sensor from sudden temperature changes using thermal insulation, and apply software compensation techniques based on known temperature fluctuations.
+Never hold interface pins high when VDDIO is off. If VDDIO is supplied but VDD is not, the interface pins are kept at high-Z and the bus can be used freely before VDD is established.
+Source sensors from reputable distributors to avoid counterfeit parts.
