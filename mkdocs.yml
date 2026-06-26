@@ -23,7 +23,7 @@ nav:
       - AI-Overview: sensors/bmp280-ai-overview.md
     - QMI8658C:
       - AI-Overview: sensors/qmi8658c-ai-overview.md
-    LC29H:
+    - LC29H:
       - AI-Overview: lc29h-ai-overview.md
 
 # Site display Configuration
