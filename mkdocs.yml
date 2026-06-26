@@ -2,20 +2,29 @@
 site_name: STMP26
 site_url: https://matas-noreika.github.io/BIP26Dublin-personal
 site_description: Additional information for Dublin STMP
-site_author: matas noreika
+site_author: Matas Noreika
 repo_name: matas-noreika/BIP26Dublin-personal
 repo_url: https://github.com/matas-noreika/BIP26Dublin-personal
+
+# Plugin configuration
+plugins:
+  - blog # enables blog on site
 
 # Navigation Setup
 nav:
   - Home: index.md
+  - Blog:
+    - blog/index.md
   - Setup:
     - ArduinoIDE: arduino-ide.md
     - Git-Basics: git-basics.md
   - Sensors:
-    - BMP280: bmp280.md
-    - QMI8658C: qmi8658c.md
-    - LC29H: lc29h.md
+    - BMP280:
+      - AI-Overview: sensors/bmp280-ai-overview.md
+    - QMI8658C:
+      - AI-Overview: sensors/qmi8658c-ai-overview.md
+    LC29H:
+      - AI-Overview: lc29h-ai-overview.md
 
 # Site display Configuration
 theme:
