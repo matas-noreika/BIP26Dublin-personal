@@ -12,15 +12,16 @@ plugins:
 
 # Navigation Setup
 nav:
-  - Home: index.md
+  - index.md
   - Blog:
     - blog/index.md
   - Setup:
     - ArduinoIDE: setup/arduino-ide.md
     - Git-Basics: setup/git-basics.md
   - Sensors:
+    - sensors/index.md
     - BMP280:
-      - AI-Overview: sensors/BMP280/bmp280-ai-overview.md
+      - AI-Overview: sensors/bmp280/bmp280-ai-overview.md
     - QMI8658C:
       - AI-Overview: sensors/qmi8658c/qmi8658c-ai-overview.md
     - LC29H:
