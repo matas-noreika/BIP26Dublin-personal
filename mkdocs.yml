@@ -1,7 +1,7 @@
 # General Site Configuration
-site_name: SMTP26
+site_name: STMP26
 site_url: https://matas-noreika.github.io/BIP26Dublin-personal
-site_description: Additional information for Dublin SMTP
+site_description: Additional information for Dublin STMP
 site_author: matas noreika
 repo_name: matas-noreika/BIP26Dublin-personal
 repo_url: https://github.com/matas-noreika/BIP26Dublin-personal
@@ -12,6 +12,7 @@ nav:
   - BMP280: bmp280.md
   - QMI8658C: qmi8658c.md
   - LC29H: lc29h.md
+  - Git-Basics: git-basics.md
 
 theme:
   name: material
