@@ -41,6 +41,11 @@ theme:
 
 # Footer customisation
 extra:
+  # Add custom copyright notice
+  copyright: Copyright &copy; 2026 Matas Noreika
+  # Disable the auto made with mkdocs-material message
+  generator: false
+  # Social link Configuration
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/matas-noreika
@@ -48,3 +53,4 @@ extra:
     - icon: fontawesome/brands/instagram
       link: https://www.instagram.com/matas.noreika
       name: matas.noreika
+
