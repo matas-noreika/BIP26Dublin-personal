@@ -1,3 +1,11 @@
+---
+title: Home
+summary: Home page of personal STMP documentation
+authors:
+  - Matas Noreika
+date: 2026-06-26 16:18:26
+---
+
 # Introduction
 
 This repository is made to hold content and material in relation to

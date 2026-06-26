@@ -9,6 +9,8 @@ repo_url: https://github.com/matas-noreika/BIP26Dublin-personal
 # Navigation Setup
 nav:
   - Home: index.md
+  - Setup:
+    - ArduinoIDE: arduino-ide.md
   - Sensors:
     - BMP280: bmp280.md
     - QMI8658C: qmi8658c.md
