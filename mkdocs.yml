@@ -16,15 +16,15 @@ nav:
   - Blog:
     - blog/index.md
   - Setup:
-    - ArduinoIDE: arduino-ide.md
-    - Git-Basics: git-basics.md
+    - ArduinoIDE: setup/arduino-ide.md
+    - Git-Basics: setup/git-basics.md
   - Sensors:
     - BMP280:
-      - AI-Overview: sensors/bmp280-ai-overview.md
+      - AI-Overview: sensors/BMP280/bmp280-ai-overview.md
     - QMI8658C:
-      - AI-Overview: sensors/qmi8658c-ai-overview.md
+      - AI-Overview: sensors/qmi8658c/qmi8658c-ai-overview.md
     - LC29H:
-      - AI-Overview: lc29h-ai-overview.md
+      - AI-Overview: sensors/lc29h/lc29h-ai-overview.md
 
 # Site display Configuration
 theme:
