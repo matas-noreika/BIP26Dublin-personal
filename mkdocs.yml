@@ -43,6 +43,7 @@ theme:
     code: Roboto Mono
   # Additional features
   features:
+    - navigation.tabs # makes top level headers appear as tabs
     - navigation.footer # enables customisation of footer
     - content.code.copy # enable copy code button on code blocks
     - content.code.select # enable line selection mode
