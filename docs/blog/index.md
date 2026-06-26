@@ -1,5 +1,5 @@
 ---
-title: blog
+title: Blog
 description: Main page of latest blog posts
 ---
 
