@@ -11,25 +11,40 @@ nav:
   - Home: index.md
   - Setup:
     - ArduinoIDE: arduino-ide.md
+    - Git-Basics: git-basics.md
   - Sensors:
     - BMP280: bmp280.md
     - QMI8658C: qmi8658c.md
     - LC29H: lc29h.md
-  - Git-Basics: git-basics.md
 
+# Site display Configuration
 theme:
-  name: material
+  name: material # Required if using mkdocs-material
   # logo: img/icon.png # icon to use in site
   # favicon: img/favicon.png # site favicon
-  language: en
+  language: en # language presetting for browser SEO
+  # Color definitions
   palette:
     scheme: slate # Dark mode, default - light mode
     primary: indigo
     accent: indigo
+  # Font configuration
   font:
     text: Roboto
     code: Roboto Mono
+  # Additional features
   features:
+    - navigation.footer # enables customisation of footer
     - content.code.copy # enable copy code button on code blocks
     - content.code.select # enable line selection mode
     - content.code.annotate # enables code annotation
+
+# Footer customisation
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/matas-noreika
+      name: matas-noreika
+    - icon: fontawesome/brands/instagram
+      link: https://www.instagram.com/matas.noreika
+      name: matas.noreika
