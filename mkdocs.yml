@@ -28,6 +28,18 @@ nav:
       - AI-Overview: sensors/lc29h/lc29h-ai-overview.md
   - contribute.md
 
+# Code block style configuration
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - admonition
+  - pymdownx.details
+
 # Site display Configuration
 theme:
   name: material # Required if using mkdocs-material

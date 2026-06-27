@@ -2,7 +2,6 @@
 title: Contribute
 description: Information on how people can contribute to site.
 icon: fontawesome/solid/people-group
-# status: new
 subtitle: Help make this site special❤️!!
 ---
 
@@ -18,11 +17,11 @@ The site is generated using a tool called [mkdocs-material](https://squidfunk.gi
 All the sites data and build information is found in the `docs/` directory.
 Here is a tree diagram of the folders found within the `docs/`:
 
-```Shell
+``` bash title="Site File Structure"
 docs
-├── blog # Directory that holds the blog files
-│   ├──index.md # Blog index page
-│   └── posts # Post directory to add new posts
+├── blog # (1)
+│   ├──index.md # (2)
+│   └── posts # (3)
 ├── index.md # Site Home page
 ├── sensors # Directory that holds all sensor tutorials and information
 │   ├── bmp280
@@ -31,6 +30,11 @@ docs
 │   └── qmi8658c
 └── setup # Directory that holds all setup tutorials and information
 ```
+
+1. This is the blog directory that holds all the files needed by the blog to work😊
+2. This is the blog index page where everything is organised by dates and categories
+3. This is the posts directory, you will be adding your own posts here by
+   making a new file
 
 ## Adding a Post
 
@@ -41,7 +45,7 @@ about the post like author and date create.
 
 Here is a sample of that metadata also referred to as front-matter:
 
-```yml
+``` yaml title="Sample of metadata options for blog post"
 ---
 date:
   created: 2026-06-27 # date created **required**
@@ -56,6 +60,11 @@ links: # Custom navigation for post to link other content
   - Blog Index: blog/index.md
 ---
 ```
+
+??? note "Author Notice"
+
+  To be added as an author please send a request by posting an issue on the
+  github repository.
 
 ## Adding Author Page
 
