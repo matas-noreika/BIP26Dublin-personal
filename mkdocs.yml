@@ -26,6 +26,7 @@ nav:
       - AI-Overview: sensors/qmi8658c/qmi8658c-ai-overview.md
     - LC29H:
       - AI-Overview: sensors/lc29h/lc29h-ai-overview.md
+  - contribute.md
 
 # Site display Configuration
 theme:
