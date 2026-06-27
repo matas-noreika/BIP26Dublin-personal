@@ -62,7 +62,6 @@ links: # Custom navigation for post to link other content
 ```
 
 ??? note "Author Notice"
-
   To be added as an author please send a request by posting an issue on the
   github repository.
 
