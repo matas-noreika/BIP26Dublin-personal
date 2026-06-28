@@ -16,7 +16,8 @@ Before starting, make sure you have:
 * The required Arduino libraries installed
 
 !!! tip
-Use a USB cable that supports data. Some USB-C cables are charge-only. They may power the board, but they will not allow code upload.
+
+    Use a USB cable that supports data. Some USB-C cables are charge-only. They may power the board, but they will not allow code upload.
 
 ## Installing Arduino IDE
 
