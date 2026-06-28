@@ -112,7 +112,8 @@ Use these settings in the **Tools** menu as a starting point:
 | Port            | The COM port for the connected board |
 
 !!! note
-The exact port number may be different on each computer. On Windows it may appear as `COM3`, `COM4`, or another COM number. The port can also be checked using Device Manager or the `mode` command in Command Prompt.
+
+        The exact port number may be different on each computer. On Windows it may appear as `COM3`, `COM4`, or another COM number. The port can also be checked using Device Manager or the `mode` command in Command Prompt.
 
 ## Installing Required Libraries
 
@@ -192,7 +193,8 @@ If the upload does not work, try these checks:
 | Board is powered but not detected | Use a known data-capable USB cable                |
 
 !!! warning
-Do not connect extra modules until a basic upload test works. It is easier to solve one problem at a time.
+        
+        Do not connect extra modules until a basic upload test works. It is easier to solve one problem at a time.
 
 ## Working With Arduino Sketches From GitHub
 
