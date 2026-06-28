@@ -3,8 +3,8 @@ date:
   created: 2026-06-27
   updated: 2026-06-27
 draft: false
-author:
-  - Matas
+authors:
+  - matas
 readtime: 5
 pin: false
 links:
