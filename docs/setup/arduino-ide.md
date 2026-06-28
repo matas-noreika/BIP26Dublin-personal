@@ -18,13 +18,13 @@ Before starting, make sure you have:
 !!! tip
 Use a USB cable that supports data. Some USB-C cables are charge-only. They may power the board, but they will not allow code upload.
 
-## Step 1 — Install Arduino IDE
+## Installing Arduino IDE
 
-Download and install Arduino IDE from the official Arduino guide:
+Download Arduino IDE from the official Arduino installation guide:
 
-[Download and install Arduino IDE](https://support.arduino.cc/hc/en-us/articles/360019833020-Download-and-install-Arduino-IDE)
+<a href="https://support.arduino.cc/hc/en-us/articles/360019833020-Download-and-install-Arduino-IDE" target="_blank" rel="noopener noreferrer">Download and install Arduino IDE</a>
 
-General steps:
+General installation steps:
 
 1. Download the latest Arduino IDE for your operating system.
 2. Install it using the default options.
@@ -34,7 +34,7 @@ General steps:
 
 Arduino IDE is now installed, but ESP32 board support still needs to be added.
 
-## Step 2 — Add ESP32 Board Support
+## Adding ESP32 Board Support
 
 The Tenstar board uses an ESP32-S3 microcontroller. Arduino IDE needs the ESP32 board package before it can compile and upload code for this board.
 
@@ -58,11 +58,11 @@ https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32
 
 Useful reference:
 
-[Espressif Arduino-ESP32 installation guide](https://docs.espressif.com/projects/arduino-esp32/en/latest/installing.html)
+<a href="https://docs.espressif.com/projects/arduino-esp32/en/latest/installing.html" target="_blank" rel="noopener noreferrer">Espressif Arduino-ESP32 installation guide</a>
 
 Click **OK**.
 
-## Step 3 — Install the ESP32 Board Package
+## Installing the ESP32 Board Package
 
 Open:
 
@@ -84,7 +84,7 @@ Espressif Systems
 
 After installation, restart Arduino IDE if the ESP32 boards do not appear in the board list.
 
-## Step 4 — Select the Board
+## Selecting the Board
 
 Go to:
 
@@ -113,7 +113,7 @@ Use these settings in the **Tools** menu as a starting point:
 !!! note
 The exact port number may be different on each computer. On Windows it may appear as `COM3`, `COM4`, or another COM number. The port can also be checked using Device Manager or the `mode` command in Command Prompt.
 
-## Step 5 — Install Required Libraries
+## Installing Required Libraries
 
 Open:
 
@@ -123,7 +123,7 @@ Sketch → Include Library → Manage Libraries
 
 Arduino library reference:
 
-[Add libraries to Arduino IDE](https://support.arduino.cc/hc/en-us/articles/5145457742236-Add-libraries-to-Arduino-IDE)
+<a href="https://support.arduino.cc/hc/en-us/articles/5145457742236-Add-libraries-to-Arduino-IDE" target="_blank" rel="noopener noreferrer">Add libraries to Arduino IDE</a>
 
 Search for and install the libraries required by the examples used in this programme.
 
@@ -138,13 +138,13 @@ Search for and install the libraries required by the examples used in this progr
 
 If Arduino IDE asks to install dependencies, choose **Install All**.
 
-## Step 6 — Upload a First Test Sketch
+## Uploading a First Test Sketch
 
 Before connecting extra sensors or GNSS modules, upload a simple test sketch first.
 
 Arduino upload reference:
 
-[Upload a sketch in Arduino IDE](https://support.arduino.cc/hc/en-us/articles/4733418441116-Upload-a-sketch-in-Arduino-IDE)
+<a href="https://support.arduino.cc/hc/en-us/articles/4733418441116-Upload-a-sketch-in-Arduino-IDE" target="_blank" rel="noopener noreferrer">Upload a sketch in Arduino IDE</a>
 
 This confirms that:
 

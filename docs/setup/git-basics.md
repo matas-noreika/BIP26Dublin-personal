@@ -43,13 +43,13 @@ Use Arduino IDE to:
 !!! tip
 Arduino IDE edits the code files. GitHub Desktop or Git CLI is used afterwards to save and upload those changes.
 
-## Step 1 — Create a GitHub Account
+## Creating a GitHub Account
 
-Create an account here:
+Create a GitHub account here:
 
-[Create a GitHub account](https://github.com/signup)
+<a href="https://github.com/signup" target="_blank" rel="noopener noreferrer">Create a GitHub account</a>
 
-Then:
+After creating an account:
 
 1. Verify your email address.
 2. Choose a username that teammates can recognise.
@@ -67,11 +67,11 @@ name-project
 
 Avoid spaces in usernames.
 
-## Step 2 — Install GitHub Desktop
+## Installing GitHub Desktop
 
 Download GitHub Desktop here:
 
-[Download GitHub Desktop](https://desktop.github.com/)
+<a href="https://desktop.github.com/" target="_blank" rel="noopener noreferrer">Download GitHub Desktop</a>
 
 GitHub Desktop is a good starting point for students because it shows changed files clearly and avoids needing to remember commands at the beginning.
 
@@ -87,13 +87,13 @@ A common folder location is:
 Documents/GitHub/
 ```
 
-## Step 3 — Clone a Repository With GitHub Desktop
+## Cloning a Repository With GitHub Desktop
 
 Cloning means downloading a copy of the repository to your computer.
 
-GitHub reference:
+Useful reference:
 
-[Cloning a repository](https://docs.github.com/articles/cloning-a-repository)
+<a href="https://docs.github.com/articles/cloning-a-repository" target="_blank" rel="noopener noreferrer">Cloning a repository</a>
 
 In GitHub Desktop:
 
@@ -104,7 +104,7 @@ In GitHub Desktop:
 
 After cloning, the project files are now on your computer.
 
-## Step 4 — Pull Latest Changes
+## Pulling Latest Changes
 
 Before editing, always pull the latest version.
 
@@ -119,7 +119,7 @@ This downloads changes made by other team members.
 !!! warning
 Pull before starting work. This reduces the chance of working on an old version of the project.
 
-## Step 5 — Create a Branch
+## Creating a Branch
 
 A branch is a safe workspace for your changes.
 
@@ -141,7 +141,7 @@ In GitHub Desktop:
 
 Avoid working directly on `main` unless the team has agreed to it.
 
-## Step 6 — Make Changes
+## Making Changes
 
 After creating a branch:
 
@@ -159,7 +159,7 @@ docs/setup/arduino-ide.md
 
 For Arduino code, open the `.ino` file in Arduino IDE.
 
-## Step 7 — Commit Changes
+## Committing Changes
 
 A commit is a saved checkpoint.
 
@@ -187,13 +187,13 @@ update
 fixed things
 ```
 
-## Step 8 — Push Changes
+## Pushing Changes
 
 Pushing uploads your commits to GitHub.
 
-GitHub Desktop reference:
+Useful reference:
 
-[Pushing changes to GitHub from GitHub Desktop](https://docs.github.com/en/desktop/making-changes-in-a-branch/pushing-changes-to-github-from-github-desktop)
+<a href="https://docs.github.com/en/desktop/making-changes-in-a-branch/pushing-changes-to-github-from-github-desktop" target="_blank" rel="noopener noreferrer">Pushing changes to GitHub from GitHub Desktop</a>
 
 In GitHub Desktop, click:
 
@@ -209,13 +209,13 @@ Publish branch
 
 Click it.
 
-## Step 9 — Open a Pull Request
+## Opening a Pull Request
 
 A pull request asks the project owner to review and merge your changes.
 
-GitHub Desktop reference:
+Useful reference:
 
-[Creating an issue or pull request from GitHub Desktop](https://docs.github.com/en/desktop/working-with-your-remote-repository-on-github-or-github-enterprise/creating-an-issue-or-pull-request-from-github-desktop)
+<a href="https://docs.github.com/en/desktop/working-with-your-remote-repository-on-github-or-github-enterprise/creating-an-issue-or-pull-request-from-github-desktop" target="_blank" rel="noopener noreferrer">Creating a pull request from GitHub Desktop</a>
 
 In GitHub Desktop:
 
@@ -247,7 +247,7 @@ Git CLI means using Git from the terminal.
 
 Download Git here:
 
-[Download Git](https://git-scm.com/downloads)
+<a href="https://git-scm.com/downloads" target="_blank" rel="noopener noreferrer">Download Git</a>
 
 After installing, check that Git is available:
 
@@ -278,9 +278,9 @@ git config --global user.email
 
 These details are attached to future commits.
 
-GitHub reference:
+Useful reference:
 
-[Set up Git](https://docs.github.com/en/get-started/git-basics/set-up-git)
+<a href="https://docs.github.com/en/get-started/git-basics/set-up-git" target="_blank" rel="noopener noreferrer">Set up Git</a>
 
 ## Cloning With Git CLI
 
