@@ -41,7 +41,8 @@ Use Arduino IDE to:
 * Use Serial Monitor for debugging
 
 !!! tip
-Arduino IDE edits the code files. GitHub Desktop or Git CLI is used afterwards to save and upload those changes.
+
+        Arduino IDE edits the code files. GitHub Desktop or Git CLI is used afterwards to save and upload those changes.
 
 ## Creating a GitHub Account
 
@@ -117,7 +118,8 @@ Fetch origin → Pull origin
 This downloads changes made by other team members.
 
 !!! warning
-Pull before starting work. This reduces the chance of working on an old version of the project.
+
+        Pull before starting work. This reduces the chance of working on an old version of the project.
 
 ## Creating a Branch
 
