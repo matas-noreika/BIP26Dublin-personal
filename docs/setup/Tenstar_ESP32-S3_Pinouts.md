@@ -7,9 +7,6 @@ authors:
   - Dovydas Klisys
 readtime: 5 
 pin: false 
-links: 
-  - Home: index.md
-  - Blog Index: blog/index.md
 ---
 
 
