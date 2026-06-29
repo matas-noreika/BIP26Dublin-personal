@@ -1,0 +1,2064 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Additional information for Dublin STMP">
+      
+      
+        <meta name="author" content="Matas Noreika">
+      
+      
+        <link rel="canonical" href="https://matas-noreika.github.io/BIP26Dublin-personal/sensors/bmp280/bmp280-ai-overview/">
+      
+      
+        <link rel="prev" href="../../">
+      
+      
+        <link rel="next" href="../../qmi8658c/qmi8658c-ai-overview/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>AI-Overview - STMP26</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#bmp280-undergraduate-guide" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="STMP26" class="md-header__button md-logo" aria-label="STMP26" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            STMP26
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              AI-Overview
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/matas-noreika/BIP26Dublin-personal" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    matas-noreika/BIP26Dublin-personal
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../blog/" class="md-tabs__link">
+          
+  
+  
+  Blog
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../setup/arduino-ide/" class="md-tabs__link">
+          
+  
+  
+  Setup
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../" class="md-tabs__link">
+          
+  
+  
+  Sensors
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../contribute/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Contribute
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="STMP26" class="md-nav__button md-logo" aria-label="STMP26" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    STMP26
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/matas-noreika/BIP26Dublin-personal" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    matas-noreika/BIP26Dublin-personal
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Blog
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Blog
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Blog
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Archive
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Archive
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/archive/2026/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2026
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Setup
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Setup
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../setup/arduino-ide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ArduinoIDE
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../setup/git-basics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Git-Basics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sensors
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Sensors
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sensors
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    BMP280
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    BMP280
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI-Overview
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI-Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-it-and-what-does-it-do" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What Is It and What Does It Do?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="What Is It and What Does It Do?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-does-a-piezo-resistive-pressure-sensor-work" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How does a piezo-resistive pressure sensor work?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#common-beginner-projects" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common beginner projects
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-numbers-to-know-specifications" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Numbers to Know (Specifications)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-are-its-limits-physical-environmental" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What Are Its Limits? (Physical &amp; Environmental)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="What Are Its Limits? (Physical &amp; Environmental)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#operating-outside-its-temperature-or-pressure-range" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Operating outside its temperature or pressure range
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#water-and-condensation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Water and condensation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pcb-placement-matters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PCB placement matters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#soldering-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Soldering considerations
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-do-you-get-the-best-out-of-it-optimisation-tips" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How Do You Get the Best Out of It? (Optimisation Tips)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="How Do You Get the Best Out of It? (Optimisation Tips)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#oversampling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Oversampling
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iir-filter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        IIR filter
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#choosing-the-right-power-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Choosing the right power mode
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Choosing the right power mode">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sleep-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sleep mode
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#forced-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Forced mode
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#normal-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Normal mode
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-altitude-readings-can-be-wrong" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why altitude readings can be wrong
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tips-for-stable-readings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tips for stable readings
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-beginner-mistakes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common Beginner Mistakes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Common Beginner Mistakes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-the-wrong-i2c-address" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Using the wrong I²C address
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#assuming-it-is-5-v-tolerant" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Assuming it is 5 V tolerant
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#buying-fake-or-incorrectly-labelled-modules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Buying fake or incorrectly labelled modules
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ignoring-self-heating" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ignoring self-heating
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#misconfigured-power-modes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Misconfigured power modes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        References
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QMI8658C
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    QMI8658C
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../qmi8658c/qmi8658c-ai-overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI-Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LC29H
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    LC29H
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lc29h/lc29h-ai-overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI-Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../contribute/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M256 0a64 64 0 1 1 0 128 64 64 0 1 1 0-128m96 312c0 25-12.7 47-32 59.9V464c0 26.5-21.5 48-48 48h-32c-26.5 0-48-21.5-48-48v-92.1C172.7 359 160 337 160 312v-40c0-53 43-96 96-96s96 43 96 96zM96 32a56 56 0 1 1 0 112 56 56 0 1 1 0-112m16 240v32c0 32.5 12.1 62.1 32 84.7V464c0 1.2 0 2.5.1 3.7-8.5 7.6-19.7 12.3-32.1 12.3H80c-26.5 0-48-21.5-48-48v-56.6c-19.1-11-32-31.7-32-55.4v-32c0-53 43-96 96-96 12.7 0 24.8 2.5 35.9 6.9-12.6 21.4-19.9 46.4-19.9 73.1m256 192v-75.3c19.9-22.5 32-52.2 32-84.7v-32c0-26.7-7.3-51.6-19.9-73.1 11.1-4.5 23.2-6.9 35.9-6.9 53 0 96 43 96 96v32c0 23.7-12.9 44.4-32 55.4V432c0 26.5-21.5 48-48 48h-32c-12.3 0-23.6-4.6-32.1-12.3 0-1.2.1-2.5.1-3.7m48-432a56 56 0 1 1 0 112 56 56 0 1 1 0-112"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    Contribute
+  
+
+    
+      <br>
+      <small>Help make this site special❤️!!</small>
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-it-and-what-does-it-do" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What Is It and What Does It Do?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="What Is It and What Does It Do?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-does-a-piezo-resistive-pressure-sensor-work" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How does a piezo-resistive pressure sensor work?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#common-beginner-projects" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common beginner projects
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-numbers-to-know-specifications" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Numbers to Know (Specifications)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-are-its-limits-physical-environmental" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What Are Its Limits? (Physical &amp; Environmental)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="What Are Its Limits? (Physical &amp; Environmental)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#operating-outside-its-temperature-or-pressure-range" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Operating outside its temperature or pressure range
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#water-and-condensation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Water and condensation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pcb-placement-matters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PCB placement matters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#soldering-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Soldering considerations
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-do-you-get-the-best-out-of-it-optimisation-tips" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How Do You Get the Best Out of It? (Optimisation Tips)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="How Do You Get the Best Out of It? (Optimisation Tips)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#oversampling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Oversampling
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iir-filter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        IIR filter
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#choosing-the-right-power-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Choosing the right power mode
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Choosing the right power mode">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sleep-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sleep mode
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#forced-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Forced mode
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#normal-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Normal mode
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-altitude-readings-can-be-wrong" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why altitude readings can be wrong
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tips-for-stable-readings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tips for stable readings
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-beginner-mistakes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common Beginner Mistakes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Common Beginner Mistakes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-the-wrong-i2c-address" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Using the wrong I²C address
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#assuming-it-is-5-v-tolerant" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Assuming it is 5 V tolerant
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#buying-fake-or-incorrectly-labelled-modules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Buying fake or incorrectly labelled modules
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ignoring-self-heating" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ignoring self-heating
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#misconfigured-power-modes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Misconfigured power modes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        References
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="bmp280-undergraduate-guide">BMP280 — Undergraduate Guide</h1>
+<h2 id="what-is-it-and-what-does-it-do">What Is It and What Does It Do?</h2>
+<p>The Bosch Sensortec <strong>BMP280</strong> is a small digital sensor that measures:</p>
+<ul>
+<li><strong>Air pressure (barometric pressure)</strong></li>
+<li><strong>Temperature</strong></li>
+</ul>
+<p>It is commonly connected to microcontrollers such as Arduino, ESP32, Raspberry Pi Pico, STM32, and many others using either the <strong>I²C</strong> or <strong>SPI</strong> communication interface.</p>
+<p>Although the BMP280 can measure temperature, its main purpose is <strong>measuring air pressure accurately</strong>. The temperature measurement is also used internally to improve the accuracy of the pressure reading.</p>
+<h3 id="how-does-a-piezo-resistive-pressure-sensor-work">How does a piezo-resistive pressure sensor work?</h3>
+<p>Imagine stretching a rubber sheet.</p>
+<p>When you press on the sheet, it bends slightly. Now imagine tiny electrical "strain gauges" attached to that sheet. As the sheet bends, the electrical resistance of those tiny elements changes.</p>
+<p>That is essentially how the BMP280 works.</p>
+<p>Inside the sensor is an incredibly thin silicon membrane. Air pressure pushes on this membrane, causing it to flex by an extremely small amount. Tiny <strong>piezo-resistive</strong> elements ("piezo" means pressure-related, and "resistive" means their electrical resistance changes) detect this bending. Electronics inside the chip convert that tiny resistance change into a digital pressure reading.</p>
+<h3 id="common-beginner-projects">Common beginner projects</h3>
+<p>The BMP280 is popular because one sensor enables several useful applications:</p>
+<ul>
+<li><strong>Weather stations</strong> – measuring atmospheric pressure and temperature to observe weather changes.</li>
+<li><strong>Altitude measurement</strong> – estimating height above sea level from air pressure.</li>
+<li><strong>Drones</strong> – helping estimate altitude and vertical movement.</li>
+<li><strong>Indoor navigation</strong> – detecting movement between building floors.</li>
+<li><strong>GPS enhancement</strong> – improving height estimation when combined with GPS.</li>
+</ul>
+<hr />
+<h2 id="key-numbers-to-know-specifications">Key Numbers to Know (Specifications)</h2>
+<p>These are the specifications that matter most when wiring and programming the BMP280 for the first time.</p>
+<table>
+<thead>
+<tr>
+<th>Specification</th>
+<th style="text-align: right;">Typical Value</th>
+<th>Why it matters</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Supply voltage (VDD)</td>
+<td style="text-align: right;"><strong>1.71–3.6 V</strong></td>
+<td>The sensor itself is <strong>not</strong> a 5 V device.</td>
+</tr>
+<tr>
+<td>Logic voltage (VDDIO)</td>
+<td style="text-align: right;"><strong>1.2–3.6 V</strong></td>
+<td>Communication pins also expect 3.3 V levels.</td>
+</tr>
+<tr>
+<td>Communication</td>
+<td style="text-align: right;"><strong>I²C or SPI</strong></td>
+<td>Most beginners use I²C because it needs fewer wires.</td>
+</tr>
+<tr>
+<td>Pressure range</td>
+<td style="text-align: right;"><strong>300–1100 hPa</strong></td>
+<td>Covers normal weather conditions and most altitude applications.</td>
+</tr>
+<tr>
+<td>Operating temperature</td>
+<td style="text-align: right;"><strong>−40 °C to +85 °C</strong></td>
+<td>Suitable for most indoor and outdoor projects.</td>
+</tr>
+<tr>
+<td>Pressure accuracy</td>
+<td style="text-align: right;">About <strong>±1 hPa</strong> (typical)</td>
+<td>Roughly equivalent to around <strong>±8 m</strong> of altitude under ideal conditions.</td>
+</tr>
+<tr>
+<td>Relative pressure accuracy</td>
+<td style="text-align: right;"><strong>±0.12 hPa</strong> (typical)</td>
+<td>Can detect altitude changes of about <strong>1 metre</strong> under stable conditions.</td>
+</tr>
+<tr>
+<td>Temperature accuracy</td>
+<td style="text-align: right;">About <strong>±1 °C</strong> (0–65 °C)</td>
+<td>Good enough for general projects, but not a laboratory thermometer.</td>
+</tr>
+<tr>
+<td>Typical current</td>
+<td style="text-align: right;">Around <strong>2.7–3.4 µA at 1 Hz</strong></td>
+<td>Extremely low power, making it suitable for battery-powered devices.</td>
+</tr>
+<tr>
+<td>Sleep current</td>
+<td style="text-align: right;">About <strong>0.1 µA</strong></td>
+<td>Uses almost no power while sleeping.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="what-are-its-limits-physical-environmental">What Are Its Limits? (Physical &amp; Environmental)</h2>
+<h3 id="operating-outside-its-temperature-or-pressure-range">Operating outside its temperature or pressure range</h3>
+<p>Every sensor is designed to work within certain limits.</p>
+<p>If the BMP280 becomes much hotter, colder, or experiences pressure outside its specified operating range:</p>
+<ul>
+<li>readings become less accurate</li>
+<li>measurements may drift</li>
+<li>the sensor may stop operating correctly</li>
+<li>extreme conditions could permanently damage it</li>
+</ul>
+<p>For typical student projects indoors or outdoors, these limits are rarely reached.</p>
+<h3 id="water-and-condensation">Water and condensation</h3>
+<p>The BMP280 is <strong>not waterproof</strong>.</p>
+<p>It measures air pressure through a tiny opening. If water enters:</p>
+<ul>
+<li>pressure readings become incorrect</li>
+<li>moisture can damage the sensing membrane</li>
+<li>condensation (tiny water droplets) can temporarily block or distort measurements</li>
+</ul>
+<p>If you're building an outdoor weather station, place the sensor inside a ventilated enclosure that keeps rain out while still allowing air to flow around it.</p>
+<h3 id="pcb-placement-matters">PCB placement matters</h3>
+<p>Where you place the sensor on your circuit board can noticeably affect measurements.</p>
+<p>Avoid placing it:</p>
+<ul>
+<li>beside voltage regulators</li>
+<li>next to power transistors</li>
+<li>near CPUs or microcontrollers that become warm</li>
+<li>close to motors</li>
+</ul>
+<p>These components heat the surrounding air. The BMP280 may then measure the board's heat rather than the true air temperature.</p>
+<p>Also avoid mounting it where the PCB bends or is under mechanical stress. Since the sensing element detects tiny deformations, stress in the circuit board can slightly affect pressure readings.</p>
+<h3 id="soldering-considerations">Soldering considerations</h3>
+<p>The BMP280 is supplied in a tiny surface-mount package.</p>
+<p>Most students use <strong>breakout boards</strong>, where the sensor has already been professionally soldered.</p>
+<p>If you ever solder the bare chip:</p>
+<ul>
+<li>follow the manufacturer's recommended reflow soldering profile</li>
+<li>avoid overheating</li>
+<li>do not repeatedly rework the chip with a soldering iron</li>
+</ul>
+<p>Excessive heat can affect calibration or permanently damage the device.</p>
+<hr />
+<h2 id="how-do-you-get-the-best-out-of-it-optimisation-tips">How Do You Get the Best Out of It? (Optimisation Tips)</h2>
+<h3 id="oversampling">Oversampling</h3>
+<p>Think of oversampling like asking five people the same question instead of one.</p>
+<p>A single measurement might contain random noise.</p>
+<p>Taking several measurements and combining them produces a smoother, more reliable answer.</p>
+<p>Higher oversampling:</p>
+<ul>
+<li>reduces noise</li>
+<li>improves altitude estimation</li>
+<li>increases measurement time</li>
+<li>uses slightly more power</li>
+</ul>
+<p>For weather stations, higher oversampling is usually worthwhile.</p>
+<p>For fast-moving drones, lower oversampling often provides quicker updates.</p>
+<h3 id="iir-filter">IIR filter</h3>
+<p>The built-in <strong>IIR (Infinite Impulse Response) filter</strong> smooths sudden jumps.</p>
+<p>Imagine averaging your last few measurements instead of trusting every single reading immediately.</p>
+<p>Higher filter settings:</p>
+<ul>
+<li>smoother graphs</li>
+<li>fewer spikes</li>
+<li>slower response to rapid pressure changes</li>
+</ul>
+<p>Use stronger filtering for:</p>
+<ul>
+<li>weather stations</li>
+<li>indoor monitoring</li>
+</ul>
+<p>Use lighter filtering or disable it for:</p>
+<ul>
+<li>drones</li>
+<li>fast altitude changes</li>
+<li>experiments requiring quick response</li>
+</ul>
+<h3 id="choosing-the-right-power-mode">Choosing the right power mode</h3>
+<p>The BMP280 offers different operating modes.</p>
+<h4 id="sleep-mode">Sleep mode</h4>
+<ul>
+<li>Uses almost no power.</li>
+<li>Best when no measurements are needed.</li>
+</ul>
+<h4 id="forced-mode">Forced mode</h4>
+<ul>
+<li>Takes one measurement when requested.</li>
+<li>Excellent for battery-powered projects that only measure every few seconds or minutes.</li>
+</ul>
+<h4 id="normal-mode">Normal mode</h4>
+<ul>
+<li>Continuously measures.</li>
+<li>Best for applications needing regular updates, such as drones or continuously running weather stations.</li>
+</ul>
+<h3 id="why-altitude-readings-can-be-wrong">Why altitude readings can be wrong</h3>
+<p>The BMP280 does <strong>not</strong> directly measure height.</p>
+<p>Instead, it estimates altitude by comparing the measured air pressure with a reference pressure (often sea-level pressure).</p>
+<p>The problem is that atmospheric pressure changes naturally with the weather. A storm can change the pressure enough to make the calculated altitude appear tens of metres different, even if the sensor has not moved.</p>
+<p>To improve altitude estimates:</p>
+<ul>
+<li>update the local sea-level pressure regularly</li>
+<li>calibrate the sensor before use</li>
+<li>use GPS or another reference if high accuracy is needed</li>
+</ul>
+<h3 id="tips-for-stable-readings">Tips for stable readings</h3>
+<ul>
+<li>Power the sensor from a clean, stable <strong>3.3 V</strong> supply.</li>
+<li>Keep wires short on a breadboard.</li>
+<li>Allow the sensor a few seconds to stabilise after power-up.</li>
+<li>Avoid touching the sensor while measuring.</li>
+<li>Keep it away from warm components.</li>
+<li>Use oversampling and filtering when high precision is more important than speed.</li>
+<li>Mount the sensor where air can circulate freely.</li>
+</ul>
+<hr />
+<h2 id="common-beginner-mistakes">Common Beginner Mistakes</h2>
+<h3 id="using-the-wrong-i2c-address">Using the wrong I²C address</h3>
+<p>The BMP280 usually appears at either:</p>
+<ul>
+<li><strong>0x76</strong></li>
+<li><strong>0x77</strong></li>
+</ul>
+<p>Many beginners assume only one address exists.</p>
+<p>If your program cannot find the sensor, run an I²C scanner first and verify which address your module uses.</p>
+<h3 id="assuming-it-is-5-v-tolerant">Assuming it is 5 V tolerant</h3>
+<p>The sensor chip itself is <strong>not 5 V tolerant</strong>.</p>
+<p>Many breakout boards include voltage regulators or level shifters that make them safe with 5 V microcontrollers, but <strong>not all modules do</strong>.</p>
+<p>Always check the specifications of the specific breakout board before connecting it to a 5 V system.</p>
+<h3 id="buying-fake-or-incorrectly-labelled-modules">Buying fake or incorrectly labelled modules</h3>
+<p>Some inexpensive modules are:</p>
+<ul>
+<li>clones with poorer quality</li>
+<li>incorrectly labelled</li>
+<li>actually a different sensor</li>
+</ul>
+<p>A common source of confusion is mixing up the <strong>BMP280</strong> and the <strong>BME280</strong>.</p>
+<ul>
+<li><strong>BMP280:</strong> Pressure + Temperature</li>
+<li><strong>BME280:</strong> Pressure + Temperature + Humidity</li>
+</ul>
+<p>Always check the chip marking or the supplier's documentation before buying.</p>
+<h3 id="ignoring-self-heating">Ignoring self-heating</h3>
+<p>Like any electronic device, the BMP280 warms up slightly while operating.</p>
+<p>Continuous measurements or nearby warm components can make the reported temperature a little higher than the surrounding air.</p>
+<p>To minimise this effect:</p>
+<ul>
+<li>measure less frequently</li>
+<li>keep the sensor away from heat sources</li>
+<li>mount it where air flows freely</li>
+</ul>
+<h3 id="misconfigured-power-modes">Misconfigured power modes</h3>
+<p>A common programming mistake is leaving the sensor in <strong>sleep mode</strong> or selecting an unsuitable operating mode.</p>
+<p>The result may be:</p>
+<ul>
+<li>readings that never update</li>
+<li>stale values</li>
+<li>no measurements at all</li>
+</ul>
+<p>Using a well-tested software library and checking the power mode during setup can save a lot of debugging time.</p>
+<hr />
+<h2 id="references">References</h2>
+<p>[1] Bosch Sensortec, <em>BMP280 Digital Pressure Sensor: Datasheet</em>, Rev. 1.19, Bosch Sensortec GmbH, 2024. [Online]. Available: <a href="https://www.bosch-sensortec.com/products/environmental-sensors/pressure-sensors/bmp280/">https://www.bosch-sensortec.com/products/environmental-sensors/pressure-sensors/bmp280/</a></p>
+<p>[2] Bosch Sensortec, <em>BMP280 Product Page</em>. [Online]. Available: <a href="https://www.bosch-sensortec.com/products/environmental-sensors/pressure-sensors/bmp280/">https://www.bosch-sensortec.com/products/environmental-sensors/pressure-sensors/bmp280/</a></p>
+<p>[3] DigiKey, <em>BMP280 Digital Pressure Sensor Datasheet (Bosch Sensortec)</em>. [Online]. Available: <a href="https://www.digikey.com/">https://www.digikey.com/</a></p>
+<p>[4] Arduino, "BMP280 Library Documentation." [Online]. Available: <a href="https://docs.arduino.cc/libraries/adafruit-bmp280-library/">https://docs.arduino.cc/libraries/adafruit-bmp280-library/</a></p>
+<p>[5] Adafruit Industries, "Adafruit BMP280 Barometric Pressure + Temperature Sensor Guide." [Online]. Available: <a href="https://learn.adafruit.com/adafruit-bmp280-barometric-pressure-plus-temperature-sensor-breakout">https://learn.adafruit.com/adafruit-bmp280-barometric-pressure-plus-temperature-sensor-breakout</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../../" class="md-footer__link md-footer__link--prev" aria-label="Previous: Sensors">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Sensors
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../qmi8658c/qmi8658c-ai-overview/" class="md-footer__link md-footer__link--next" aria-label="Next: AI-Overview">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                AI-Overview
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://github.com/matas-noreika" target="_blank" rel="noopener" title="matas-noreika" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://www.instagram.com/matas.noreika" target="_blank" rel="noopener" title="matas.noreika" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M224.3 141a115 115 0 1 0-.6 230 115 115 0 1 0 .6-230m-.6 40.4a74.6 74.6 0 1 1 .6 149.2 74.6 74.6 0 1 1-.6-149.2m93.4-45.1a26.8 26.8 0 1 1 53.6 0 26.8 26.8 0 1 1-53.6 0m129.7 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8M399 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.footer", "content.code.copy", "content.code.select", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
