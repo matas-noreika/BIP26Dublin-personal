@@ -1,7 +1,7 @@
 ---
 date:
   created: 2026-06-27
-  updated: 2026-06-27
+  updated: 2026-06-29
 draft: false
 authors:
   - matas
@@ -19,3 +19,6 @@ will serve as a collection of new content I learned as well as a platform for
 others to join and collaborate with me.
 
 <!-- more -->
+
+The following post is only to serve as a reference for people wishing to
+contribute to the blog site.
