@@ -51,8 +51,8 @@ date:
   created: 2026-06-27 # date created **required**
   updated: 2026-06-27 # date updated last
 draft: false # set to true if you wish for post to not appear on site
-author:
-  - Matas # name defined in site configuration (added by request)
+authors:
+  - matas # name defined in site configuration (added by request)
 readtime: 5 # time in minutes
 pin: false # Pins the post on blog index page
 links: # Custom navigation for post to link other content
@@ -68,4 +68,21 @@ links: # Custom navigation for post to link other content
 
 ## Adding Author Page
 
-**TBD**
+Once you are added as an author to the you can add your own markdown named like
+the author name given, example:
+
+```yaml title="blog/.author.yml"
+authors:
+    matas:
+        name: Matas Noreika
+        description: Creator
+        avatar: https://github.com/matas-noreika.png
+```
+
+The following file below will allow the author to edit their own author page:
+
+```markdown title="blog/author/matas.md"
+# matas
+
+you can start to write your own bio here 😊
+```
